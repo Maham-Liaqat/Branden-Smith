@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NCAA Career Assists Leaders — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h2>NCAA Career Assists Leaders</h2>
+      <p class="subtitle">Tracking Braden Smith's journey to the all‑time record</p>
+    </header>
+
+    <main>
+      <!-- Player headline card -->
+      <section class="card player-summary" aria-labelledby="player-summary-title">
+        <div class="player-main">
+          <div class="player-id">
+            <div class="player-name-row">
+              <span class="rank-pill" id="player-rank">#11</span>
+              <h3 id="player-name">Braden Smith</h3>
+              <span class="school-pill" id="player-school">Purdue</span>
+            </div>
+            <p class="muted" id="player-ranking-text">Current Ranking: #11 All‑Time</p>
+          </div>
+          <div class="career-assists">
+            <div class="muted small">Career Assists</div>
+            <div class="big-number" id="player-assists">0</div>
+          </div>
+        </div>
+
+        <div class="progress-block" aria-label="Progress to Record">
+          <div class="progress-label-row">
+            <span class="muted">Progress to Record</span>
+            <span class="muted" id="progress-percent">0%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <div class="stat-grid" role="list" aria-label="Key statistics">
+          <div class="stat-card" role="listitem">
+            <div class="icon">🏆</div>
+            <div>
+              <div class="stat-value" id="assists-to-record">0</div>
+              <div class="stat-label">Assists to Record</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="icon">🎯</div>
+            <div>
+              <div class="stat-value" id="assists-to-next">0</div>
+              <div class="stat-label">To pass Anthony</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="icon">📈</div>
+            <div>
+              <div class="stat-value" id="games-at-5">~0</div>
+              <div class="stat-label">Games at 5 APG</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline / Leaders -->
+      <section class="card timeline-card" aria-labelledby="timeline-title">
+        <h3 id="timeline-title" class="sr-only">Timeline to the record</h3>
+        <div class="timeline" id="timeline" aria-hidden="false">
+          <div class="timeline-track" id="timeline-track">
+            <div class="timeline-progress" id="timeline-progress"></div>
+            <div class="tick start" id="tick-start"><span id="tick-start-label">0</span></div>
+            <div class="tick end" id="tick-end"><span id="tick-end-label">0</span> <span class="trophy" aria-hidden="true">🏆</span></div>
+          </div>
+          <!-- Cards are injected by JS -->
+          <div class="timeline-layer" id="timeline-layer"></div>
+        </div>
+        <div class="legend">
+          <span class="dot dot-smith"></span> Braden Smith
+          <span class="dot dot-leader"></span> All‑time Leaders
+        </div>
+      </section>
+
+      <!-- Admin panel -->
+      <button class="link like-muted" id="toggle-admin" aria-expanded="true">Hide Admin Panel</button>
+      <section class="card admin" id="admin-panel" aria-labelledby="admin-title">
+        <div class="admin-header">
+          <h3 id="admin-title">Manual Update Panel</h3>
+        </div>
+        <div class="admin-controls">
+          <div class="field">
+            <label class="label" for="player-select">Select Player</label>
+            <select id="player-select"></select>
+          </div>
+          <div class="field">
+            <label class="label" for="assists-input">Assists to Add</label>
+            <input id="assists-input" type="number" min="1" step="1" value="1" />
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" id="btn-add">＋ Add</button>
+            <button class="btn btn-ghost" id="btn-subtract" aria-label="Subtract"><span aria-hidden="true">−</span></button>
+          </div>
+        </div>
+        <p class="muted admin-note"><span id="player-current-line">Braden Smith currently has 0 career assists (Active Player)</span></p>
+
+        <div class="dev-notes">
+          <div class="note-title">Developer Notes</div>
+          <ul>
+            <li>This admin panel simulates manual updates. In production connect to a DB.</li>
+            <li>Replace this UI with a dashboard or custom admin page.</li>
+            <li>All viewers will see updates in real‑time with subscriptions.</li>
+            <li>Add authentication to restrict admin access.</li>
+            <li>Include game‑by‑game tracking with dates and opponents.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Boiler Up! 🏴‍☠️ Go Braden Smith!</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+

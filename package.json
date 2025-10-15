@@ -1,0 +1,27 @@
+{
+  "name": "ncaa-career-assists-leaders",
+  "version": "1.0.0",
+  "description": "NCAA Career Assists Leaders - Tracking Braden Smith's journey to the all-time record",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for static site'",
+    "start": "echo 'Static site - serve index.html'"
+  },
+  "keywords": [
+    "ncaa",
+    "basketball",
+    "assists",
+    "tracker",
+    "sports",
+    "statistics"
+  ],
+  "author": "Braden Smith Asset Tracker",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
