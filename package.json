@@ -4,9 +4,9 @@
   "description": "NCAA Career Assists Leaders - Tracking Braden Smith's journey to the all-time record",
   "main": "index.html",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'No build step required for static site'",
-    "start": "echo 'Static site - serve index.html'"
+    "dev": "node api.js && vercel dev",
+    "build": "node api.js && echo 'No build step required for static site'",
+    "start": "node api.js && echo 'Static site - serve index.html'"
   },
   "keywords": [
     "ncaa",
