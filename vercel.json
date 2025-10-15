@@ -1,6 +1,8 @@
 {
   "version": 2,
   "name": "branden-smith-by-maham",
+  "buildCommand": "echo 'No build step required for static site'",
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/(.*)",
